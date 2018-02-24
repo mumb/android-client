@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:background="@color/green_blue"
+    >
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtNum"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="28"
+        android:textColor="@android:color/white"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtType"
+        style="@style/BodyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="Correct"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        />
+
+</LinearLayout>

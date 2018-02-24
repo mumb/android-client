@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_blue"
+    >
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tick_big"
+        app:layout_constraintBottom_toTopOf="@+id/txtCompleted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorButton
+        android:id="@+id/btnXplorMore"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_bigger_vertical_margin"
+        android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+        android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+        android:background="@drawable/shape_bg_btn_blue"
+        android:text="@string/xplor_again"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtCompleted"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/completed"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/btnXplorMore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtPoints"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@id/btnXplorMore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="28 Points"
+        />
+
+    <include
+        android:id="@+id/viewCorrect"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/txtPoints"
+        app:layout_constraintEnd_toStartOf="@+id/viewWrong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCompleted"
+        />
+
+    <include
+        android:id="@+id/viewWrong"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/txtPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCompleted"
+        />
+
+    <include
+        android:id="@+id/viewSkipped"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/txtPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewWrong"
+        app:layout_constraintTop_toBottomOf="@id/txtCompleted"
+        />
+
+</android.support.constraint.ConstraintLayout>

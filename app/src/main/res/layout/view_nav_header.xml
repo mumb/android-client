@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/view_bigger_vertical_margin"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo"
+            />
+
+    </FrameLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:paddingBottom="@dimen/view_bigger_vertical_margin"
+        android:paddingLeft="@dimen/view_big_vertical_margin"
+        android:paddingRight="@dimen/view_big_vertical_margin"
+        android:paddingTop="@dimen/view_bigger_vertical_margin"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgNavHeaderProfile"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/profile_image_placeholder"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="1dp"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtNavHeaderName"
+            style="@style/BoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_big_vertical_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/imgNavHeaderProfile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtNavHeaderPoints"
+            tools:text="Rohit Sharma"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:includeFontPadding="false"
+
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtNavHeaderPoints"
+            style="@style/BoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textColor="@color/off_white"
+            app:layout_constraintStart_toStartOf="@id/txtNavHeaderName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtNavHeaderName"
+            android:includeFontPadding="false"
+            tools:text="0 points earned"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

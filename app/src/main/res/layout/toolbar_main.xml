@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xplor.android.ui.widgets.NonClickableToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/XplorToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:contentInsetLeft="0dp"
+    android:contentInsetStart="0dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.xplor.android.ui.widgets.XplorImageView
+            android:id="@+id/img_home_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            tools:src="@android:drawable/ic_delete"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txt_toolbar_title"
+            style="@style/ScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_toEndOf="@id/img_home_action"
+            android:layout_toRightOf="@id/img_home_action"
+            tools:text="Login"
+            />
+    </RelativeLayout>
+</com.xplor.android.ui.widgets.NonClickableToolbar>

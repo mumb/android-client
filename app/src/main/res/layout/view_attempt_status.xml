@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:padding="@dimen/view_big_vertical_margin"
+    >
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtNumAttempt"
+        style="@style/BoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        tools:text="30"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtAttemptType"
+        style="@style/BodyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="4dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:textSize="12sp"
+        tools:text="Correct"
+        />
+
+</LinearLayout>

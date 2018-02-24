@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/shape_bg_white_rounded"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgAnswerResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:minWidth="48dp"
+            tools:src="@drawable/right"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtAnswerResult"
+            style="@style/BoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            tools:text="You were Right !"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtTriviaTitle"
+            style="@style/BoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:textColor="@color/black_70"
+            android:textSize="12sp"
+            tools:text="Did you know ?"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtTrivia"
+            style="@style/BodyInstruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:gravity="center"
+            tools:text="In 16th-century Europe, oil painting on canvas arose as an easier method for mural painting. The advantage was that the artwork could be completed in the artist's studio and later transported to its destination"
+            />
+
+        <com.xplor.android.ui.widgets.XplorButton
+            android:id="@+id/btnContinue"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+            android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/shape_bg_button_normal"
+            android:text="@string/continue_btn"
+            android:textColor="@color/textColor"
+            />
+
+        <com.xplor.android.ui.widgets.XplorButton
+            android:id="@+id/btnViewQuestion"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+            android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:background="@drawable/shape_bg_button_outline"
+            android:text="@string/view_question"
+            android:textColor="@color/textColor"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <View
+        android:id="@+id/viewToolbarScrim"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewToolbarScrim"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtMuseumAddress"
+                style="@style/BodyInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/border_color"
+                android:padding="@dimen/view_default_vertical_margin"
+                tools:text="Alamanda 701, Nahar Amrit Shakti"
+                android:textSize="12sp"
+                />
+
+            <com.xplor.android.ui.widgets.XplorMapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/colorPrimary"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtMuseumName"
+                style="@style/BoldBodyBigTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/view_big_vertical_margin"
+                android:paddingRight="@dimen/view_big_vertical_margin"
+                android:paddingTop="@dimen/view_bigger_vertical_margin"
+                tools:text="National Science Museum"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtMuseumCityCountry"
+                style="@style/BodyInstruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingBottom="@dimen/view_bigger_vertical_margin"
+                android:paddingLeft="@dimen/view_big_vertical_margin"
+                android:paddingRight="@dimen/view_big_vertical_margin"
+                tools:text="London UK"
+                />
+
+            <com.xplor.android.ui.widgets.XplorImageView
+                android:id="@+id/imgThumbnailMuseum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="200dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/museum_lg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.xplor.android.ui.widgets.XplorButton
+                    android:id="@+id/btnAbout"
+                    style="@style/BoldTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/border_color"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:text="@string/about"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="12sp"
+                    />
+
+                <com.xplor.android.ui.widgets.XplorButton
+                    android:id="@+id/btnQuizzes"
+                    style="@style/BoldTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/border_color"
+                    android:gravity="center"
+                    android:padding="14dp"
+                    android:text="@string/quizzes"
+                    android:textColor="@drawable/text_selector"
+                    android:textSize="12sp"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                >
+
+                <include
+                    android:id="@+id/containerMuseumInfo"
+                    layout="@layout/layout_museum_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <include
+                    android:id="@+id/containerQuizCategories"
+                    layout="@layout/layout_quiz_categories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/view_big_vertical_margin"
+        android:paddingRight="@dimen/view_big_vertical_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/profile_image_placeholder"
+            app:civ_border_color="@android:color/white"
+            app:civ_border_width="1dp"
+            app:layout_constraintBottom_toTopOf="@id/txtUserName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtName"
+            style="@style/BodyInstruction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_big_vertical_margin"
+            android:layout_marginRight="@dimen/view_big_vertical_margin"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="Rohit Sharma"
+            android:textSize="16sp"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtPoints"
+            style="@style/BoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1837"
+            android:textColor="@color/green_blue"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_color"
+        />
+
+</LinearLayout>

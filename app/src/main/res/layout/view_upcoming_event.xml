@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.xplor.android.ui.widgets.XplorImageView
+        android:id="@+id/imgEventPhoto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/light_blue"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtEventName"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_default_vertical_margin"
+        android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgEventPhoto"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fox and Franz Josefh Glaciers"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtEventDate"
+        style="@style/BodyInstruction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_small_vertical_margin"
+        android:layout_marginLeft="@dimen/view_default_vertical_margin"
+        android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/imgEventPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgEventPhoto"
+        tools:text="26th Jan, 2:30 Pm"
+        />
+
+</android.support.constraint.ConstraintLayout>

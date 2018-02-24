@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtMuseumName"
+        style="@style/BodyInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/view_big_vertical_margin"
+        android:layout_marginTop="@dimen/view_big_vertical_margin"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="National Science Museum"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtCategoryName"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/txtMuseumName"
+        app:layout_constraintTop_toBottomOf="@id/txtMuseumName"
+        tools:text="Art and Literature"
+        />
+
+    <View
+        android:id="@+id/viewTopDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/view_big_vertical_margin"
+        android:background="@color/border_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtCategoryName"
+        />
+
+    <LinearLayout
+        android:id="@+id/containerAttemptSummary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopDivider"
+        >
+
+        <include
+            android:id="@+id/viewCorrect"
+            layout="@layout/view_attempt_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/border_color"
+            />
+
+        <include
+            android:id="@+id/viewWrong"
+            layout="@layout/view_attempt_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/border_color"
+            />
+
+        <include
+            android:id="@+id/viewSkipped"
+            layout="@layout/view_attempt_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewBottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/border_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerAttemptSummary"
+        />
+
+    <com.xplor.android.ui.widgets.XplorButton
+        android:id="@+id/btnSubmit"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_bigger_vertical_margin"
+        android:layout_marginLeft="@dimen/view_big_vertical_margin"
+        android:layout_marginRight="@dimen/view_big_vertical_margin"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        android:text="@string/submit_answers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewBottomDivider"
+        />
+
+</android.support.constraint.ConstraintLayout>

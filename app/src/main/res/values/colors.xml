@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="denim_blue">#1945e6</color>
+    <color name="midnight_blue">#144eab</color>
+    <color name="green_blue">#00cc87</color>
+    <color name="white_85">#D9FFFFFF</color>
+    <color name="black_12">#1e000000</color>
+    <color name="pinkish_red">#eb2226</color>
+    <color name="black_50">#7C000000</color>
+    <color name="pinkish_grey">#c0c0c0</color>
+    <color name="black_70">#B4000000</color>
+    <color name="black_30">#4D000000</color>
+    <color name="warm_grey">#979797</color>
+    <color name="off_white">#edf2f8</color>
+    <color name="light_grey">#f9fbfd</color>
+    <color name="light_grey_2">#f7f7f7</color>
+    <color name="border_color">#f1f1f1</color>
+    <color name="light_blue">#9fb2f4</color>
+    <color name="apricot">#ffc563</color>
+    <color name="warm_grey_2">#d7d2d2</color>
+    <color name="squash">#4df2c71e</color>
+
+    <color name="colorPrimary">@color/denim_blue</color>
+    <color name="colorPrimaryDark">@color/midnight_blue</color>
+    <color name="colorAccent">@color/green_blue</color>
+    <color name="unselected">@color/black_12</color>
+    <color name="selected">@color/green_blue</color>
+    <color name="error">@color/pinkish_red</color>
+    <color name="textColor">@android:color/black</color>
+    <color name="textColorInstructions">@color/black_50</color>
+    <color name="divider_color">#33979797</color>
+</resources>

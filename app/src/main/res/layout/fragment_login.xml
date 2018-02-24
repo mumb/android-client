@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/view_bigger_vertical_margin"
+    >
+
+    <com.xplor.android.ui.widgets.XplorButton
+        android:id="@+id/btnContinueWithoutLogin"
+        style="@style/Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_button_normal"
+        android:paddingBottom="@dimen/view_big_vertical_margin"
+        android:paddingTop="@dimen/view_big_vertical_margin"
+        android:text="@string/continue_without_login"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtOr"
+        style="@style/BodyInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_big_vertical_margin"
+        android:text="@string/or"
+        app:layout_constraintBottom_toTopOf="@id/btnContinueWithoutLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/btnLoginFb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_big_vertical_margin"
+        android:background="@drawable/shape_bg_btn_blue"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/txtOr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <com.xplor.android.ui.widgets.XplorButton
+            style="@style/Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:drawableLeft="@drawable/fb"
+            android:drawablePadding="8dp"
+            android:paddingBottom="@dimen/view_big_vertical_margin"
+            android:paddingTop="@dimen/view_big_vertical_margin"
+            android:text="@string/continue_with_fb"
+            />
+
+    </LinearLayout>
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtCreateAccount"
+        style="@style/BoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_big_vertical_margin"
+        android:text="@string/create_an_account"
+        android:textColor="@color/textColorInstructions"
+        app:layout_constraintBottom_toTopOf="@id/btnLoginFb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorImageView
+        android:id="@+id/imgAppLogo"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/logo_login"
+        app:layout_constraintBottom_toTopOf="@id/txtCreateAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        />
+
+</android.support.constraint.ConstraintLayout>

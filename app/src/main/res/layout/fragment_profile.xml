@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    >
+
+    <com.xplor.android.ui.widgets.XplorButton
+        android:id="@+id/btnLogOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_big_vertical_margin"
+        android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+        android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+        android:background="@drawable/shape_bg_button_normal"
+        android:text="@string/log_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtPoints"
+        style="@style/BoldBodyBigTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="1156 Points"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/btnLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtUserName"
+        style="@style/BodyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/view_big_vertical_margin"
+        tools:text="Rohit Sharma"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/txtPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="@dimen/view_default_vertical_margin"
+        android:src="@drawable/profile_image_placeholder"
+        app:civ_border_color="@android:color/white"
+        app:civ_border_width="1dp"
+        app:layout_constraintBottom_toTopOf="@id/txtUserName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <include
+        android:id="@+id/viewNumQuizzes"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnLogOut"
+        app:layout_constraintEnd_toStartOf="@+id/viewRank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPoints"
+        />
+
+    <include
+        android:id="@+id/viewRank"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPoints"
+        />
+
+    <include
+        android:id="@+id/viewAccuracy"
+        layout="@layout/view_attemp_status_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/btnLogOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/viewRank"
+        app:layout_constraintTop_toBottomOf="@id/txtPoints"
+        />
+
+</android.support.constraint.ConstraintLayout>

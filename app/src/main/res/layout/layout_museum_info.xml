@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/view_big_vertical_margin"
+    >
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtMuseumDescription"
+        style="@style/BodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="The Science museum is a major museum on the exhibit road in south kensington, London. It was founded in 1857 and today is one of the city's major attractions, attracting 3.3 million visitors annually"
+        android:textColor="@color/black_70"
+        android:lineSpacingExtra="4sp"
+        android:textSize="16sp"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        style="@style/BodyInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        android:text="@string/distance"
+        android:textSize="12sp"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtDistance"
+        style="@style/BoldTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_default_vertical_margin"
+        android:includeFontPadding="false"
+        tools:text="4.9 Kms"
+        android:textSize="18sp"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtNumPhotosAdded"
+        style="@style/BodyInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        tools:text="25 PHOTOS ADDED"
+        android:textSize="12sp"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvPhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        />
+
+    <com.xplor.android.ui.widgets.XplorTextView
+        android:id="@+id/txtUpcomingEvents"
+        style="@style/BodyInstruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        tools:text="UPCOMING EVENTS"
+        android:textSize="12sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/containerUpcomingEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:orientation="vertical"
+        />
+
+    <com.xplor.android.ui.widgets.XplorButton
+        android:id="@+id/btnExploreQuizzes"
+        style="@style/Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+        android:text="@string/explore_quizzes"
+        />
+
+</LinearLayout>

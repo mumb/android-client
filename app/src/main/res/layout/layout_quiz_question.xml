@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@drawable/shape_bg_white_rounded"
+        android:orientation="vertical"
+        android:padding="@dimen/view_default_vertical_margin"
+        >
+
+        <com.xplor.android.ui.widgets.XplorImageView
+            android:id="@+id/imgQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:maxHeight="300dp"
+            tools:src="@drawable/question"
+            />
+
+        <com.xplor.android.ui.widgets.XplorTextView
+            android:id="@+id/txtQuestion"
+            style="@style/BoldTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_big_vertical_margin"
+            android:gravity="center"
+            android:paddingLeft="@dimen/view_bigger_vertical_margin"
+            android:paddingRight="@dimen/view_bigger_vertical_margin"
+            tools:text="Which Spanish artist created this painting ?"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_big_vertical_margin"
+            android:orientation="horizontal"
+            >
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtOptionA"
+                style="@style/BodyInstruction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/view_bigger_vertical_margin"
+                tools:text="A. Rohit Sharma"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtOptionB"
+                style="@style/BodyInstruction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/view_big_vertical_margin"
+                android:paddingRight="@dimen/view_big_vertical_margin"
+                tools:text="B. Bipul Karnani"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_default_vertical_margin"
+            android:orientation="horizontal"
+            >
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtOptionC"
+                style="@style/BodyInstruction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/view_bigger_vertical_margin"
+                tools:text="C. Kedar Deore"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtOptionD"
+                style="@style/BodyInstruction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/view_big_vertical_margin"
+                android:paddingRight="@dimen/view_big_vertical_margin"
+                tools:text="B. Rohit Kondapalli"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerOptionSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/view_big_vertical_margin"
+            android:orientation="horizontal"
+            >
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtA"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="@drawable/selector_options"
+                android:gravity="center"
+                android:text="@string/letter_a"
+                android:textColor="@drawable/selector_text_options"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtB"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_options"
+                android:gravity="center"
+                android:text="@string/letter_b"
+                android:textColor="@drawable/selector_text_options"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtC"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_options"
+                android:gravity="center"
+                android:text="@string/letter_c"
+                android:textColor="@drawable/selector_text_options"
+                />
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtD"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_options"
+                android:gravity="center"
+                android:text="@string/letter_d"
+                android:textColor="@drawable/selector_text_options"
+                />
+
+        </LinearLayout>
+
+        <com.xplor.android.ui.widgets.XplorButton
+            android:id="@+id/btnSubmitAnswer"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+            android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+            android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+            android:background="@drawable/shape_bg_button_normal"
+            android:textColor="@color/textColor"
+            tools:text="@string/submit_answer"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/view_big_vertical_margin"
+            android:layout_marginLeft="@dimen/view_bigger_vertical_margin"
+            android:layout_marginRight="@dimen/view_bigger_vertical_margin"
+            android:layout_marginTop="@dimen/view_bigger_vertical_margin"
+            android:animateLayoutChanges="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <FrameLayout
+                android:id="@+id/viewShowHint"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/selector_hint_bg"
+                >
+
+                <com.xplor.android.ui.widgets.XplorImageView
+                    android:id="@+id/imgShowHint"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/selector_hint_src"
+                    />
+
+            </FrameLayout>
+
+            <com.xplor.android.ui.widgets.XplorTextView
+                android:id="@+id/txtHint"
+                style="@style/BodyInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/view_default_vertical_margin"
+                android:lineSpacingExtra="4dp"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="Yet very little attention has been paid to the views so vigorously expressed in 1935 by two figures aspiring in a sense to replace them."
+                tools:visibility="visible"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
